@@ -1,13 +1,13 @@
 {
-  "name": "vscode-jest-runner",
-  "displayName": "Jest Runner",
-  "description": "Simple way to run or debug a single (or multiple) tests from context-menu",
-  "version": "0.4.57",
+  "name": "vscode-jest-runner-rescript",
+  "displayName": "Jest Runner Rescript",
+  "description": "Forked clone of vscode-jest-runner that working with .res files",
+  "version": "0.4.56",
   "publisher": "firsttris",
   "author": "Tristan Teufel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/firsttris/vscode-jest-runner.git"
+    "url": "https://github.com/endosama/vscode-jest-runner-rescript"
   },
   "license": "MIT",
   "icon": "public/icon.png",
@@ -93,7 +93,7 @@
           },
           "jestrunner.codeLensSelector": {
             "type": "string",
-            "default": "**/*.{test,spec}.{js,jsx,ts,tsx}",
+            "default": "**/*.{test,spec}.{res}",
             "description": "CodeLens will be shown on files matching this pattern"
           },
           "jestrunner.enableYarnPnpSupport": {
@@ -183,12 +183,12 @@
       "explorer/context": [
         {
           "command": "extension.runJestPath",
-          "when": "explorerResourceIsFolder || resourceFilename =~ /.*\\.(spec|test)\\.(js|jsx|ts|tsx)$/",
+          "when": "explorerResourceIsFolder || resourceFilename =~ /.*\\.(spec|test)\\.(res)$/",
           "group": "02_jest@1"
         },
         {
           "command": "extension.debugJestPath",
-          "when": "explorerResourceIsFolder || resourceFilename =~ /.*\\.(spec|test)\\.(js|jsx|ts|tsx)$/",
+          "when": "explorerResourceIsFolder || resourceFilename =~ /.*\\.(spec|test)\\.(res)$/",
           "group": "02_jest@2"
         }
       ]

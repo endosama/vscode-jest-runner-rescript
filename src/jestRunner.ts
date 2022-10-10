@@ -198,7 +198,8 @@ export class JestRunner {
   }
 
   private buildJestCommand(filePath: string, testName?: string, options?: string[]): string {
-    const args = this.buildJestArgs(filePath, testName, true, options);
+    const mjsPath = filePath.replace('.res', '.mjs');
+    const args = this.buildJestArgs(mjsPath, testName, true, options);
     return `${this.config.jestCommand} ${args.join(' ')}`;
   }
 
